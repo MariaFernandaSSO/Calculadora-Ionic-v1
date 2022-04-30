@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> CALCULADORA </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="display" class="ion-text-end" placeholder="0" readonly="true">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('7')">
+          7
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('8')">
+          8
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('9')"
+          >9</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" expand="block" (click)="escolherCalculo('/')">/</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('4')"
+          >4</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('5')"
+          >5</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('6')"
+          >6</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" expand="block" (click)="escolherCalculo('*')">
+          *
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('1')"
+          >1</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('2')"
+          >2</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('3')"
+          >3</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" expand="block" (click)="escolherCalculo('-')">
+          -
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="success" expand="block" (click)="usarPonto()">
+           . 
+          </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="block" (click)="clicar('0')"
+          >0</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" expand="block" (click)="efetuarCalculo()">
+          =
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" expand="block" (click)="escolherCalculo('+')">
+          +
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" expand="block" (click)= "limpar()">
+          <ion-icon name="trash-outline" slot="start"></ion-icon>
+          LIMPAR
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
